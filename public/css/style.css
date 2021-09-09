@@ -208,12 +208,12 @@ a:focus,
   display: table;
   width: 100%;
   padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
+  background: url(../img/zebra_base.png) center center no-repeat;
   background-color: #e5e5e5;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+  -webkit-background-size: full;
+  -moz-background-size: full;
+  background-size: full;
+  -o-background-size: full;
 }
 .intro .overlay {
   background: rgba(0, 0, 0, 0.2);
