@@ -5,18 +5,18 @@ const database = mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: tr
   .then(() => console.log('Connected to database.', process.env.DATABASE_URL))
   .catch(err => console.error('Error connecting to database:', err.message));
 
-const Schema = mongoose.Schema;
+// const Schema = mongoose.Schema;
 
-const SomeModelSchema = new Schema({
-    aString: String,
-  });
+// const SomeModelSchema = new Schema({
+//     aString: String,
+//   });
 
-const SomeModel = mongoose.model('SomeModel', SomeModelSchema );
+// const SomeModel = mongoose.model('SomeModel', SomeModelSchema );
 
-const testModel = new SomeModel({aString: 'testing'});
-testModel.save(function (err) {
-    if (err) {return handleError(err)}
-})
+// const testModel = new SomeModel({aString: 'testing'});
+// testModel.save(function (err) {
+//     if (err) {return handleError(err)}
+// })
 
 // const NftSchema = new Schema({
 //     cid: String,

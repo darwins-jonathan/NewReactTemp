@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
 const NftSchema = new Schema({
     cid: {
@@ -20,13 +20,19 @@ const NftSchema = new Schema({
       signature: {
         type: String
       }
-  });
+  }, {versionKey: false});
 
-const NftModel = mongoose.model('NftModel', NftSchema );
+const Nft = mongoose.model('Nft', NftSchema );
 
-module.export = NftModel
+module.exports = Nft
 
-// const test_nftModel = new NftModel({cid: 'testing1'});
+// const test_nftModel = new NftModel({
+//   cid: 'testing2',
+//   tokenId: 1,
+//   creator: 'me',
+//   account: 'me',
+//   signature: 'signature'
+// });
 // test_nftModel.save(function (err) {
 //     if (err) return handleError(err)
 // })

@@ -19,8 +19,28 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
+  
   useEffect(() => {
     setLandingPageData(JsonData);
+    const testData = {
+      cid: "test3",
+      tokenId: 3,
+      creator: "me",
+      account: "me",
+      signature: "signature"
+    }
+    const req = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origins': '*'
+      },
+      body:JSON.stringify(testData),
+      mode: 'no-cors'
+    }
+    fetch('http://localhost:3001/api/nft/IPFSCreation721', req)
+      .then(res => res.json())
+      .then(result => result)
   }, []);
 
   return (
